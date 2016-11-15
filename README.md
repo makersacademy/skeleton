@@ -24,6 +24,10 @@ A skelton structure for scaffolding new Makers Academy websites.
 * Merge the pull request into master
 * Once our [CI server](https://codeship.com/projects/184953) has passed the tests, it will automatically deploy to Github Pages by using the `rake publish` command provided by the [Middleman GitHub pages extension](https://github.com/neo/middleman-gh-pages). This builds a Middleman site and pushes the built repo onto a gh-pages branch.
 
+##### Alternative deployment
+
+There is an interactive script for deployment as well. To use it, run `rake publish:domain` and follow the instructions. You will need to have various things set up already; check the `Rakefile` for more information.
+
 ## Technologies used
 
 * [Ruby](https://www.ruby-lang.org/en/) as our server side language
