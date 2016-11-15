@@ -53,10 +53,10 @@ helpers CurrentPageHelper,
         BooleanHelper
 
 # Proxy pages (https://middlemanapp.com/advanced/dynamic_pages/)
-data.graduates.each do | grad |
-  if grad[:case_study]
-    url_slug = graduate_slug(grad)
-    proxy "/case-studies/#{url_slug}.html", "/case-studies/template.html", locals: { grad: grad }, ignore: true
+data.example_dataset.each do | example |
+  if example[:case_study]
+    url_slug = graduate_slug(example)
+    proxy "/example-dynamic-pages/#{url_slug}.html", "/example-dynamic-pages/template.html", locals: { example: example }, ignore: true
   end
 end
 
@@ -71,33 +71,6 @@ set :apply_url, "/apply"
 set :onsite_application_form_url, "http://apply.makersacademy.com"
 set :remote_application_form_url, "http://apply.makersacademy.com/remote/application"
 set :precourse_beta_application_form_url, "http://apply.makersacademy.com/precourse-beta/application"
-
-# Redirects from old site urls
-redirect "payments/new.html", to: "#{config.onsite_application_form_url}/payments/new"
-redirect "apply-for-ronin.html", to: config.remote_application_form_url
-redirect "fellowship.html", to: "http://techcityfellowship.org/"
-redirect "life-at-makers.html", to: "about-us.html"
-redirect "talks.html", to: "employers.html"
-redirect "talks/apply.html", to: "employers.html"
-redirect "students.html", to: "graduates.html"
-redirect "student-blogs.html", to: "graduates.html"
-redirect "student-projects.html", to: "graduates.html"
-redirect "graduate-stories.html", to: "graduates.html"
-redirect "testimonials.html", to: "graduates.html"
-redirect "alumni.html", to: "graduates.html"
-redirect "network.html", to: "employers.html"
-redirect "payment-plans.html", to: "payment.html"
-redirect "jobs.html", to: "join-the-team.html"
-redirect "blog.html", to: "http://blog.makersacademy.com"
-redirect "payments.html", to: "payment.html"
-redirect "partners.html", to: "employers.html"
-redirect "learn-to-code-1.html", to: "entrepreneurs.html"
-redirect "learn-to-code-2.html", to: "index.html"
-redirect "learn-to-code-3.html", to: "education-leaver.html"
-redirect "learn-to-code-4.html", to: "index.html"
-redirect "learn-to-code-5.html", to: "index.html"
-redirect "faq.html", to: "about-us.html"
-redirect "employers-startups.html", to: "startups.html"
 
 configure :development do
   activate :livereload
