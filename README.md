@@ -49,7 +49,9 @@ When adding a new image, add it to the [images directory](https://github.com/mak
 
 We use Bower to share our assets across the various Makers Academy websites. Instructions for updating Bower Styles can be found on the [Makers Academy Website repository README](http://github.com/makersacademy/website).
 
-You can override Bower Styles locally, inside the `/source/sass` directory.
+This skeleton should use the latest version of `makers_styles` wherever possible. You can update the Makers Styles version in `bower.json`, and then run `bower install` to upgrade.
+
+You can override Bower Styles locally, inside the `/source/sass` directory. An `overrides.scss` has been provided for that use.
 
 # Segment.io tracking
 

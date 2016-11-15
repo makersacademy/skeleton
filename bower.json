@@ -1,23 +1,17 @@
 {
-  "name": "makers_styles",
-  "version": "2.9.0",
+  "name": "makers-academy-skeleton",
+  "version": "0.0.1",
   "authors": [
     "Makers Engineering <dev@makersacademy.com>"
   ],
-  "main": [
-    "source/sass/all.scss",
-    "source/javascripts/all.js"
-  ],
   "license": "MIT",
   "ignore": [
-    "*",
-    "!source/stylesheets/**",
-    "!source/sass/**",
-    "!source/fonts/**",
-    "!source/images/**",
-    "!source/javascripts/**",
-    "source/javascripts/website.js"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec"
   ],
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "makers_styles": "2.9.0"
+  }
 }
