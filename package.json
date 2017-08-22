@@ -18,5 +18,8 @@
   "homepage": "https://github.com/makersacademy/website#readme",
   "devDependencies": {
     "jasmine-node": "^1.14.5"
+  },
+  "dependencies": {
+    "makers-styles": "^0.0.8"
   }
 }
