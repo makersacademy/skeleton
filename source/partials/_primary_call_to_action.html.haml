@@ -1,0 +1,39 @@
+- backgrounded ||= true
+- page ||= :default
+- if page == :employers
+
+  %section.hero--apply{style: backgrounded ? "background-image: url(#{image_path("backgrounds/postit-wall.jpg")});": ""}
+    .container
+      .centered-row
+        .column
+          %h2 Join Us
+          %p It costs nothing, until you find the right person.
+      .button-row
+        %p
+          = link_to "Have Hiring Questions?", "http://bit.ly/meetWB", class: "button button--horizontal"
+          = link_to "Hire Developers", "/employers/contact.html", class: "employers-button button button--vertical button--large", target: "_blank"
+          = link_to "Apply to Study", config.apply_url, class: "button button--horizontal"
+- else
+
+  %section.hero--apply{style: backgrounded ? "background-image: url(#{image_path("backgrounds/postit-wall.jpg")});": ""}
+    .container
+      .centered-row
+        .column
+          %h2 Apply Now
+          %p We run cohorts every 6 weeks onsite and every 12 weeks remotely, and applications are highly competitive. We offer numerous payment options.
+      .button-row
+        %p
+          - if page == :payment
+            = link_to "See our Graduates", "/graduates.html", class: "button button--horizontal"
+          - else
+            = link_to "Payment Options", "/payment.html", class: "button button--horizontal"
+
+          - if page == :remote
+            = link_to "Remote", config.remote_application_form_url, class: "button button--vertical button--large apply-button", data: {track: "Clicked Remote Apply Button"}
+          - else
+            = link_to "Apply", config.apply_url, class: "button button--vertical button--large apply-button", data: {track: "Clicked Apply Page Button"}
+
+          - if page == :about_us
+            = link_to "See our Curriculum", "/curriculum.html", class: "button button--horizontal"
+          - else
+            = link_to "Learn More", "/about-us.html", class: "button button--horizontal"

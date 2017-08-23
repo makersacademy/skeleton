@@ -1,0 +1,20 @@
+%header{class: "mobile-navigation", role: "banner"}
+  %label{role: "menu-trigger", for: "nav_trigger", class: "nav-trigger-label"}
+  %input{type: "checkbox", id: "nav_trigger", class: "nav-trigger"}
+  %nav{role: "navigation"}
+    .image--centered.image--small
+      = image_tag "logo/ma-white.png"
+    %ul.navigation-menu
+      %li{ class: current_if_current_page(current_page, "/") }
+        = link_to "Home", "/"
+      %li{ class: current_if_current_page(current_page, "/elements/") }
+        = link_to "Elements", "/elements.html"
+
+%header{class: "navigation auto-hide", role: "banner"}
+  %nav{role: "navigation"}
+    = link_to image_tag("logo/ma-wordmark-red.png"), "/", class: "image--brand"
+    %ul.navigation-menu
+      %li{ class: current_if_current_page(current_page, "/elements/") }
+        = link_to "Elements", "/elements.html"
+        %li
+          = link_to "Action", config.apply_url, class: "button button--vertical apply-button", data: {track: "Clicked Action  Button"}

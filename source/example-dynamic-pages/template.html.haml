@@ -1,0 +1,29 @@
+/ Example Dynamic Page Template
+
+%section.no-padding-bottom
+  .container
+    .profile-row
+      .image.show-desktop
+        = image_tag("graduates/#{example[:image]}")
+      .copy
+        %h4.leader Case Study
+        %h1= "#{example[:first_name]} #{example[:last_name]}"
+        %h4.subheader= example[:summary]
+        %blockquote= example[:testimonial]
+        - next_grad = next_graduate(example)
+        .image.hide-desktop.no-padding
+          = image_tag("graduates/#{example[:image]}")
+%hr
+
+%section.no-padding-top
+  .article--centered
+    %article
+      %dl
+        - example[:case_study].each do | qa |
+          %dt= qa[:question]
+          %dd= markdown qa[:answer]
+    .button-row
+      = link_to "Next Story", "/case-studies/#{graduate_slug(next_grad)}", class: "button button--horizontal"
+
+= partial :"apply"
+

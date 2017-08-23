@@ -1,0 +1,17 @@
+{
+  "name": "makers-academy-skeleton",
+  "version": "0.0.1",
+  "authors": [
+    "Makers Engineering <dev@makersacademy.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec"
+  ],
+  "dependencies": {
+    "makers_styles": "2.9.0"
+  }
+}
